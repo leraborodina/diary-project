@@ -9,6 +9,7 @@ import { DiaryEntryComponent } from './diary/diary-entry/diary-entry/diary-entry
 import { DiaryEntryManagerComponent } from './diary/diary-entry-manager/diary-entry-manager/diary-entry-manager.component';
 import { DiaryNoteComponent } from './diary/diary-note/diary-note/diary-note.component';
 import { DiaryNoteManagerComponent } from './diary/diary-note-manager/diary-note-manager.component';
+import { DiaryNoteFormComponent } from './diary/diary-note-form/diary-note-form.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DiaryNoteManagerComponent } from './diary/diary-note-manager/diary-note
     DiaryEntryComponent,
     DiaryEntryManagerComponent,
     DiaryNoteComponent,
-    DiaryNoteManagerComponent
+    DiaryNoteManagerComponent,
+    DiaryNoteFormComponent
   ],
   imports: [
     BrowserModule,
