@@ -8,10 +8,9 @@ describe('DiaryNoteFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [DiaryNoteFormComponent]
-    })
-    .compileComponents();
-    
+      declarations: [DiaryNoteFormComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(DiaryNoteFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

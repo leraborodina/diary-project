@@ -1,1 +1,52 @@
-<p>diary-note-form works!</p>
+<form (ngSubmit)="onSubmit()" class="diary-note-form">
+  <div class="diary-note-form__header">
+    <h2 class="diary-note-form__title">{{ formTitle }}</h2>
+    <div class="diary-note-form__actions">
+      <button type="submit" class="diary-note-form__save-button">
+        Сохранить
+      </button>
+      <button
+        type="button"
+        class="diary-note-form__back-button"
+        (click)="onBackClick()"
+      >
+        Назад
+      </button>
+    </div>
+  </div>
+  <div class="diary-note-form__main-area">
+    <ckeditor [editor]="Editor" [(ngModel)]="description" name="description">
+    </ckeditor>
+    <div class="diary-note-form__image-area">
+      <div class="diary-note-form__image-container" *ngIf="image">
+        <img
+          [src]="image"
+          name="image"
+          alt="Изображение"
+          class="diary-note-form__image"
+        />
+        <button
+          type="button"
+          class="diary-note-form__remove-image-button"
+          (click)="onRemoveImage()"
+        >
+          ✖
+        </button>
+      </div>
+      <input
+        type="file"
+        #fileInput
+        (change)="onFileChange($event)"
+        accept="image/*"
+        style="display: none"
+      />
+      <button
+        type="button"
+        class="diary-note-form__image-button"
+        (click)="triggerFileInput()"
+      >
+        Выбрать изображение
+      </button>
+    </div>
+  </div>
+</form>
