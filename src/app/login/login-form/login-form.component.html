@@ -1,1 +1,50 @@
-<p>login-form works!</p>
+<div class="login-form">
+  <h2 class="login-form__title">Авторизация</h2>
+  <form [formGroup]="loginForm" class="login-form__form" (ngSubmit)="onLogin()">
+    <div class="login-form__input-area">
+      <label class="login-form__label">Логин</label>
+      <input
+        formControlName="login"
+        type="text"
+        class="login-form__input"
+        id="login"
+        name="login"
+        required
+      />
+      <div
+        *ngIf="
+          loginForm.get('login')?.touched && loginForm.get('login')?.invalid
+        "
+      >
+        <small *ngIf="loginForm.get('login')?.errors?.['required']"
+          >Введите логин</small
+        >
+      </div>
+    </div>
+    <div class="login-form__input-area">
+      <label class="login-form__label">Пароль</label>
+      <input
+        formControlName="password"
+        type="password"
+        class="login-form__input"
+        id="password"
+        name="password"
+        required
+      />
+      <div
+        *ngIf="
+          loginForm.get('password')?.touched &&
+          loginForm.get('password')?.invalid
+        "
+      >
+        <small *ngIf="loginForm.get('password')?.errors?.['required']"
+          >Введите пароль</small
+        >
+      </div>
+    </div>
+    <div *ngIf="errorMessage" class="login-form__error-message">
+      {{ errorMessage }}
+    </div>
+    <button type="submit" class="login-form__button">Войти</button>
+  </form>
+</div>
