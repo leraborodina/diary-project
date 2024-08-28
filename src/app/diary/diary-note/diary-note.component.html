@@ -1,1 +1,21 @@
-<p>diary-note works!</p>
+<div class="diary-note">
+  <div class="diary-note__header">
+    <span class="diary-note__time-label">{{ formatDate(note.time) }}</span>
+    <div class="diary-note__actions">
+      <button class="diary-note__edit-button" type="button" (click)="onEdit()">
+        Редактировать
+      </button>
+      <button class="diary-note__remove-button" (click)="deleteNote()">
+        Удалить
+      </button>
+    </div>
+  </div>
+  <div class="diary-note__body">
+    <div class="diary-note__description" [innerHTML]="safeDescription">
+      {{ note.description }}
+    </div>
+    <div class="diary-note__image-container">
+      <img [src]="note.image" alt="Image" *ngIf="note.image" />
+    </div>
+  </div>
+</div>

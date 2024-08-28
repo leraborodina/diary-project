@@ -1,0 +1,71 @@
+.diary-note {
+  background-color: #e0ecf8;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  min-width: min-content;
+}
+
+.diary-note__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.diary-note__time-label {
+  font-size: 17px;
+  color: #4b6983;
+}
+
+.diary-note__actions {
+  display: flex;
+  gap: 5px;
+}
+
+.diary-note__edit-button,
+.diary-note__remove-button {
+  background-color: #b0c4de;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: min-content;
+  margin-left: 10px;
+  font-size: 14px;
+  color: #4b6983;
+  cursor: pointer;
+}
+
+.diary-note__edit-button:hover,
+.diary-note__remove-button:hover {
+  background-color: #a0b8d4;
+}
+
+.diary-note__body {
+  display: flex;
+  gap: 15px;
+}
+
+.diary-note__description {
+  flex: 1;
+  background-color: #b0c4de;
+  padding: 10px;
+  color: #4f4f4f;
+}
+
+.diary-note__image-container {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  background-color: #b0c4de;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.diary-note__image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 5px;
+}
