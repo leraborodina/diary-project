@@ -1,1 +1,32 @@
-<p>diary-overview works!</p>
+<div class="diary-overview__header">
+  <label class="diary-overview__label">
+    Добро пожаловать, {{ userLogin }}
+  </label>
+  <div class="diary-overview__actions">
+    <button
+      type="button"
+      class="diary-overview__create-button"
+      (click)="onCreate()"
+      routerLink="/create"
+    >
+      Создать новую запись
+    </button>
+    <button
+      type="button"
+      class="diary-overview__logout-button"
+      (click)="onLogout()"
+    >
+      Выйти
+    </button>
+  </div>
+</div>
+<div class="diary-overview__area">
+  <ul class="diary-overview__note-list">
+    <li
+      *ngFor="let note of userNotes$ | async"
+      class="diary-overview__note-item"
+    >
+      <app-diary-note [note]="note" (edit)="onEdit(note?.id)"> </app-diary-note>
+    </li>
+  </ul>
+</div>

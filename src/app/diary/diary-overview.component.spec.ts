@@ -8,10 +8,9 @@ describe('DiaryOverviewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [DiaryOverviewComponent]
-    })
-    .compileComponents();
-    
+      declarations: [DiaryOverviewComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(DiaryOverviewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

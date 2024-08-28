@@ -1,0 +1,68 @@
+.diary-overview__area {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.diary-overview__header {
+  font-size: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 20px 0;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.diary-overview__label {
+  color: #4b6983;
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+.diary-overview__actions {
+  display: flex;
+  gap: 10px;
+}
+
+.diary-overview__create-button,
+.diary-overview__logout-button {
+  background-color: #b0c4de;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #4b6983;
+  cursor: pointer;
+}
+
+.diary-overview__note-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .diary-overview__header {
+    font-size: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .diary-overview__label {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .diary-overview__actions {
+    width: 100%;
+    justify-content: spac;
+  }
+}
