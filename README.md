@@ -1,27 +1,124 @@
 # DiaryProject
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
+Этот проект был создан с использованием [Angular CLI](https://github.com/angular/angular-cli) версии 17.3.2.
 
-## Development server
+## Установка и запуск проекта
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Предварительные требования
 
-## Code scaffolding
+Перед началом работы убедитесь, что у вас установлены следующие инструменты:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. **Node.js**:
 
-## Build
+- Проверьте установку, запустив команду:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+    ```
+    node -v
+    ```
 
-## Running unit tests
+- Если Node.js не установлен, загрузите его с [официального сайта Node.js](https://nodejs.org/).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. **Angular CLI**:
 
-## Running end-to-end tests
+- Проверьте установку, запустив команду:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+    ```
+    ng version
+    или
+    ng --version
+    ```
 
-## Further help
+- Если Angular CLI не установлен, установите его глобально с помощью команды:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    ```
+    npm install -g @angular/cli
+    ```
+
+### Установка проекта
+
+1. **Выберите или создайте каталог для установки проекта**:
+
+- Откройте терминал и перейдите в каталог, где вы хотите установить проект. Например:
+
+    ```
+    cd ~/Desktop
+    ```
+
+- Вы можете создать новый каталог, если это необходимо:
+
+    ```
+    mkdir diary-project
+    cd diary-project
+    ```
+
+2. **Клонируйте репозиторий**:
+
+    ```
+    git clone https://github.com/leraborodina/diary-project.git
+    ```
+
+3. **Перейдите в каталог проекта**
+
+    ```
+    cd diary-project
+    ```
+
+4. **Установите зависимости**
+
+    ```
+    npm install
+    ```
+
+### Запуск проекта
+
+1. **Запустите локальный сервер**
+
+    ```
+    ng serve
+    ```
+
+    или
+
+    ```
+    npm start
+    ```
+
+### Обработка ошибок
+
+#### Если в процеесе запуска программы возникают такие ошибки как
+```
+npm start   
+
+> diary-project@0.0.0 start
+> ng serve
+
+Node.js version v17.3.0 detected.
+The Angular CLI requires a minimum of v18.13.
+
+Please update your Node.js version or visit https://nodejs.org/ for additional instructions.
+```
+
+#### Выполните следующие команды
+```
+nvm install 18.16.1 
+nvm use 18.16.1  
+npm start
+```
+
+2. **Откройте проект в браузере**
+
+    #### Перейдите по адресу http://localhost:4200
+
+### Авторизация
+
+#### Для авторизации создано два пользователя
+
+    1. Пользователь 1
+
+    логин: user1
+    пароль: password1
+
+    2.  Пользователь 2
+
+    логин: user2
+    пароль: password2
